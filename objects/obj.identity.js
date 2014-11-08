@@ -7,7 +7,45 @@ var colors = [
 	"#676077","#65AC92","#C2C092","#EDD48E","#8C2318","#5E8C6A","#88A65E","#BFB35A","#F2C45A","#4F364C",
 	"#5E405F","#6B6B6B","#8F9E6F","#B1CF72","#67917A","#170409","#B8AF03","#CCBF82","#E33258","#F87E7B"];
 var range = colors.length;
-function avatar(name) {
-	var list = name.split(" ");
-	console.log(list);
+function avatar(name, size) {
+	var list = name.split(" "),
+		text = "",
+		number = 0,
+		code = 0,
+		avatar = document.createElement("div");
+	for (i=0; i<list.length; i++) {
+		text += list[i][0];
+	}
+	for (j=0; j<name.length; j++) {
+		number += name.charCodeAt(j);
+	}
+	code = number % range;
+	if (text.length > 4) {
+		text = text.substring(0,4);
+	}
+	avatar.appendChild(document.createTextNode(text));
+	avatar.style.borderRadius = "100px";
+	avatar.style.backgroundColor = colors[code];
+	avatar.style.color = "white";
+	avatar.style.textAlign = "center";
+	avatar.style.margin = "2px";
+	switch (size) {
+		case 'xx-small':
+			break;
+		case 'x-small':
+			break;
+		case 'small':
+			break;
+		case 'medium':
+			avatar.style.width = avatar.style.height = avatar.style.lineHeight = "50px";
+			break;
+		case 'large':
+			break;
+		case 'x-large':
+			break;
+		case 'xx-large':
+			break;
+	}
+	console.log(text, number, code);
+	return avatar;
 }

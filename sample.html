@@ -7,10 +7,15 @@
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$("p").each(function() {
-					avatar($(this).text());
+					$("#p-medium").append(avatar($(this).text(), "medium"));
 				})
 			});
 		</script>
+		<style type="text/css">
+			div#p-medium div{
+				float: left;
+			}
+		</style>
 	</head>
 	<body>
 		<p>Jorge García Barderas</p>
@@ -19,5 +24,7 @@
 		<p>Jonathan Cabrera</p>
 		<p>Cecilio del Moral Mora</p>
 		<p>Juan García Bázquez</p>
+		<p>Jaime de Todos los Santos III</p>
+		<div id='p-medium'></div>
 	</body>
 </html>
