@@ -5,7 +5,9 @@ var colors = [
 	"#8B911A","#556270","#4ECDC4","#C7F464","#FF6B6B","#C44D58","#8D7966","#A8A39D","#D8C8B8","#DBD9B7",
 	"#C1C9C8","#A5B5AB","#949A8E","#615566","#AADEAD","#BBDEAD","#CCDEAD","#DDDEAD","#EEDEAD","#641F5E",
 	"#676077","#65AC92","#C2C092","#EDD48E","#8C2318","#5E8C6A","#88A65E","#BFB35A","#F2C45A","#4F364C",
-	"#5E405F","#6B6B6B","#8F9E6F","#B1CF72","#67917A","#170409","#B8AF03","#CCBF82","#E33258","#F87E7B"];
+	"#5E405F","#6B6B6B","#8F9E6F","#B1CF72","#67917A","#170409","#B8AF03","#CCBF82","#E33258","#F87E7B",
+	"#1E6075","#1C264A","#2DA89C","#C91842","#98173D","#D28574","#703D6F","#706482","#F1396D","#7D2948",
+	"#3B0032","#4B000F"];
 var range = colors.length;
 function avatar(name, size, radius) {
 	name = name.trim();

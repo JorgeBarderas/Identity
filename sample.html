@@ -2,6 +2,15 @@
 <html>
 	<head>
 		<title>Identity sample</title>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			body{font-family: helvetica, Arial, verdana;}
+			.sample {float: left;}
+			#code {font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif; line-height: 25px; background-color: #333; color: white; border-left: solid 4px orange; padding: 3px 15px;}
+			.name {font-size: 11px; line-height: 12px;}
+			.titleHeader {padding: 5px 10px; color: gray;}
+			.sample:nth-child(2n) {background-color: #eee;}
+		</style>
 		<script src="./lib/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="./objects/obj.identity.js"></script>
 		<script type="text/javascript">
@@ -9,7 +18,7 @@
 				$(".name").each(function() {
 					$("#p-xx-small").append(avatar($(this).text(), "xx-small"));
 					$("#p-x-small").append(avatar($(this).text(), "x-small"));
-					$("#p-small").append(avatar($(this).text(), "small", 5));
+					$("#p-small").append(avatar($(this).text(), "small"));
 					$("#p-medium").append(avatar($(this).text(), "medium"));
 					$("#p-large").append(avatar($(this).text(), "large"));
 					$("#p-x-large").append(avatar($(this).text(), "x-large"));
@@ -44,29 +53,19 @@
 				});
 			});
 		</script>
-		<style type="text/css">
-			body{font-family: helvetica, Arial, verdana;}
-			.sample{
-				float: left;
-			}
-			#code {
-				font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-				line-height: 25px;
-				background-color: #333;
-				color: white;
-				border-left: solid 4px orange;
-				padding: 3px 15px;
-			}
-		</style>
 	</head>
 	<body>
-		<p class='name'>Jorge Garcia Barderas</p>
-		<p class='name'>Juan Calero</p>
-		<p class='name'>Alberto Chacon</p>
-		<p class='name'>Jonathan Cabrera</p>
-		<p class='name'>Cecilio del Moral Mora</p>
-		<p class='name'>Juan Garcia Blazquez</p>
-		<p class='name'>Jaime de Todos los Santos III</p>
+		<h2>Sample name</h2>
+		<p class='name'>Arquímedes de Siracusa</p>
+		<p class='name'>Leonardo da Vinci</p>
+		<p class='name'>Nicolás Copérnico</p>
+		<p class='name'>Galileo Galilei</p>
+		<p class='name'>Isaac Newton</p>
+		<p class='name'>Benjamin Franklin</p>
+		<p class='name'>Louis Pasteur</p>
+		<p class='name'>Nikola Tesla</p>
+		<p class='name'>Albert Einstein</p>
+		<p class='name'>Stephen Hawking</p>
 		<p>
 			<table>
 				<thead>
@@ -78,12 +77,12 @@
 			</table>
 		</p>
 		<p id='code'>avatar("<label id='sampleName'></label>","medium", <label id='sampleRadius'>0</label>);</p>
-		<div class='sample' id='p-xx-small'></div>
-		<div class='sample' id='p-x-small'></div>
-		<div class='sample' id='p-small'></div>
-		<div class='sample' id='p-medium'></div>
-		<div class='sample' id='p-large'></div>
-		<div class='sample' id='p-x-large'></div>
-		<div class='sample' id='p-xx-large'></div>
+		<div class='sample' id='p-xx-small'><div class='titleHeader'>xx-small</div></div>
+		<div class='sample' id='p-x-small'><div class='titleHeader'>x-small</div></div>
+		<div class='sample' id='p-small'><div class='titleHeader'>small</div></div>
+		<div class='sample' id='p-medium'><div class='titleHeader'>medium</div></div>
+		<div class='sample' id='p-large'><div class='titleHeader'>large</div></div>
+		<div class='sample' id='p-x-large'><div class='titleHeader'>x-large</div></div>
+		<div class='sample' id='p-xx-large'><div class='titleHeader'>xx-large</div></div>
 	</body>
 </html>
