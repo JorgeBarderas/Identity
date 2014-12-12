@@ -1,3 +1,4 @@
+/*BY JORGE BARDERAS - https://github.com/JorgeBarderas/Identity V.1.1 */
 var colors = [
 	"#1B325F","#9CC4E4","#3A89C9","#F26C4F","#FC284F","#FF824A","#FEA887","#D1313D","#E5625C","#F9BF76",
 	"#8EB2C5","#615375","#99B898","#FECEA8","#FF847C","#E84A5F","#2A363B","#BED6C7","#ADC0B4","#8A7E66",
