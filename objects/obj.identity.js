@@ -11,25 +11,13 @@ var colors = [
 var range = colors.length;
 function avatar(name, size, radius) {
 	name = name.trim();
-	var list = name.split(" "),
-		text = "",
-		number = 0,
-		code = 0,
+	var text = avatar_text(name),
+		color = avatar_color(name),
 		avatar = document.createElement("div");
-	for (i=0; i<list.length; i++) {
-		text += list[i][0];
-	}
-	for (j=0; j<name.length; j++) {
-		number += name.charCodeAt(j);
-	}
-	code = number % range;
-	if (text.length > 3) {
-		text = text.substring(0,3);
-	}
 	avatar.appendChild(document.createTextNode(text));
 	if (radius === undefined) {radius = 100;}
 	avatar.style.borderRadius = radius+"px";
-	avatar.style.backgroundColor = colors[code];
+	avatar.style.backgroundColor = color;
 	avatar.style.color = "white";
 	avatar.style.textAlign = "center";
 	avatar.style.margin = "2px";
@@ -64,4 +52,23 @@ function avatar(name, size, radius) {
 			break;
 	}
 	return avatar;
+}
+function avatar_color(name) {
+	name = name.trim();
+	var number = 0,
+		code = '';
+	for (j=0; j<name.length; j++) {
+		number += name.charCodeAt(j);
+	}
+	code = number % range;
+	return colors[code];
+}
+function avatar_text(name) {
+	name = name.trim();
+	var list = name.split(" "),
+		text = "";
+	for (i=0; i<list.length && i<3; i++) {
+		text += list[i][0];
+	}
+	return text;
 }
